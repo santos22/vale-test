@@ -1,3 +1,3 @@
 jobs:
-  install: curl -sfL https://install.goreleaser.com/github.com/ValeLint/vale.sh | sh -s v2.2.0; export PATH="./bin:$PATH"
-  script: vale --glob='*.{md,rst}' directory
+  install: curl -sfL https://install.goreleaser.com/github.com/ValeLint/vale.sh | sh -s v2.2.0
+  script: export PATH="./bin:$PATH"; vale --glob='*.{md,rst}' directory
