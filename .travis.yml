@@ -12,3 +12,5 @@ jobs:
 
 install:
   - pip install tox-travis
+script:
+  - tox
