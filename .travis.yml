@@ -3,4 +3,4 @@
 #  script: export PATH="./bin:$PATH"; vale --glob='*.{md,rst}' directory
 
 script:
-  - ./scripts/$TEST_SUITE.sh
+  - ./scripts/vale.sh
