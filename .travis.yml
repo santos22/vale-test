@@ -1,9 +1,14 @@
+language: python
+python:
+  - 3.6
+dist: xenial
+
 jobs:
-  install: curl -sfL https://install.goreleaser.com/github.com/ValeLint/vale.sh | sh -s v2.2.0
-  script: export PATH="./bin:$PATH"; vale --glob='*.{md,rst}' docs
+  include:
+    - python: 3.6
+      env: TOXENV=lint
+      script: tox
+      install: curl -sfL https://install.goreleaser.com/github.com/ValeLint/vale.sh | sh -s v2.2.0
 
-# before_install:
-#  - chmod +x ./scripts/vale.sh
-
-#script:
-#  - ./scripts/vale.sh
+install:
+  - pip install tox-travis
