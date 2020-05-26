@@ -3,11 +3,11 @@ python:
   - 3.6
 dist: xenial
 
-jobs:
-  include:
-    - python: 3.6
-      env: TOXENV=lint
-      install: curl -sfL https://install.goreleaser.com/github.com/ValeLint/vale.sh | sh -s v2.2.0
+# jobs:
+#   include:
+#     - python: 3.6
+#       env: TOXENV=lint
+#       install: curl -sfL https://install.goreleaser.com/github.com/ValeLint/vale.sh | sh -s v2.2.0
 
 install:
   - pip install tox-travis
